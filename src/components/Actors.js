@@ -10,7 +10,9 @@ function Actors() {
         {actors.map((actor, index) => (
           <li key={index}>
             <h2>Name: {actor.name}</h2>
-            <p>Movies: {actor.movies.join(", ")}</p>
+            <ul>{actor.movies.map((movie,indexmovie) =>(
+             <li key={indexmovie}>{movie}</li>))}</ul>
+            
           </li>
         ))}
       </ul>

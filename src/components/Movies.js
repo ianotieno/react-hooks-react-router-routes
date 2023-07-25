@@ -9,7 +9,11 @@ function Movies() {
           <li key={index}>
             <h1>Name: {movie.title}</h1>
             <p>time: {movie.time}</p>
-            <p>genres:{movie.genres.join(",")}</p>
+            <ul>
+        {movie.genres.map((genre, genreIndex) => (
+          <li key={genreIndex}>{genre}</li>
+        ))}
+      </ul>
           </li>
         ))}
       </ul>
