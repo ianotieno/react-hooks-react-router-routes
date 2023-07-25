@@ -8,7 +8,9 @@ function Directors() {
         {directors.map((director, index) => (
           <li key={index}>
             <h2>Name: {director.name}</h2>
-            <p>Movies: {director.movies.join(", ")}</p>
+            <ul>{director.movies.map((movie,index)=>(
+              <li key={index}>{movie}</li>
+            ))}</ul>
           </li>
         ))}
       </ul>
